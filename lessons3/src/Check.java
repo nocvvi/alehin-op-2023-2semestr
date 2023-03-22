@@ -1,16 +1,14 @@
-import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Check {
-    private final ArrayList<Integer> info;
-    public Check(ArrayList<Integer> info) {
-        this.info = info;
-    }
-    public int counter(){
-        int count = 0;
-        for (int i : info) {
-            if (i == 1) {
-                count++;
-            }
+    public float [] coordinates() {
+        Scanner scanner = new Scanner(System.in);
+        int size = 2;
+        float [] coordinate = new float [size];
+        for (int i = 0; i < size; i++) {
+            System.out.println("Введите координату:");
+            coordinate[i] = scanner.nextInt();
         }
-        return count;
+        return coordinate;
     }
 }

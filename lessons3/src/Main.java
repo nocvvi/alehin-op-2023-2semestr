@@ -1,9 +1,10 @@
-import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-        Input input = new Input();
-        ArrayList<Integer> info = input.getInfo();
-        Check scan = new Check(info);
-        System.out.println("Сотрудников зашло на предприяте:  " + scan.counter());
+        Check coo = new Check();
+        float [] A = coo.coordinates();
+        float [] B = coo.coordinates();
+        float [] C = coo.coordinates();
+        Triangle triangle = new Triangle(A, B, C);
+        System.out.println("Барицентр треугольника находится в координатах [" + triangle.getXBarycenter() + "," + triangle.getYBarycenter() + "]");
     }
 }
